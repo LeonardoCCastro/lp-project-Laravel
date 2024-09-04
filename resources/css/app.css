@@ -1,0 +1,6 @@
+@import url('fullpage.css');
+@import url('fancybox.css');
+@import url('main.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Futura-Bold';
+    src: url('/public/fonts/Futura-Bold-Oblique.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Helvetica-Neue';
+    src: url('/public/fonts/Helvetica-Neue.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lihataja';
+    src: url('/public/fonts/Lihataja.ttf') format('truetype');
+}
+
+.falldown {
+    display: flex;
+    background: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 99999;
+}
+
+.falldown-in {
+    display: flex;
+    background: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+.falldown-background {
+    background: #FFBF00;
+    width: 16,66666666666667%;
+    flex: 1;
+    height: 0;
+    transition: .3s;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+.custom-rounded {
+    border-radius: 69% 33% 58% 47% / 42% 39% 61% 58%;
+}
