@@ -22,6 +22,7 @@
         "flowbite": "^2.5.1",
         "fullpage.js": "^4.0.26",
         "jquery": "^3.7.1",
-        "vanilla-tilt": "^1.8.1"
+        "vanilla-tilt": "^1.8.1",
+        "vite-plugin-clean": "^1.0.0"
     }
 }
