@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.pagefull')
 
 @section('style')
     <link rel="stylesheet" href="{{ asset('css/fullpage.css') }}">
