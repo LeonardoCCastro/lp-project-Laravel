@@ -32,11 +32,11 @@
 
         <header class="w-full fixed z-10">
             <nav class="bg-black px-4 py-4 xl:bg-opacity-80 backdrop-blur-lg backdrop-filter fixed top-0 left-0 w-full lg:px-6 xl:bg-transparent">
-                <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+                <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-2xl">
                     <a href="/" class="flex items-center text-white text-4xl font-['Lihataja']">
                         Luiz
                     </a>
-                    <div class="flex items-center lg:order-2">
+                    <div class="flex items-center lg:order-1">
                         <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 lg:hidden"
                             aria-controls="mobile-menu-2" aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
@@ -50,7 +50,7 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+                    <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-2" id="mobile-menu-2">
                         <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
                             <li>
                                 <a onclick="nextPage('1')" class="text-white text-2xl font-['Futura-Bold'] uppercase hover:text-orange-500 cursor-pointer">Início</a>
@@ -67,7 +67,25 @@
                             <li>
                                 <a onclick="nextPage('5')" class="text-white text-2xl font-['Futura-Bold'] uppercase hover:text-orange-500 cursor-pointer">Contato</a>
                             </li>
+                            <div class="flex lg:hidden flex-row gap-2 justify-center items-center">
+                                @auth
+                                    <a href="{{ route('dashboard') }}" class="m-4 px-6 py-3.5 font-['Futura-Bold'] text-sm  text-black   bg-[#FFBF00]   rounded-lg text-center hover:bg-orange-500">ENTRAR</a>
+                                    <a href="{{ route('dashboard') }}" class="m-4 px-6 py-3.5 font-['Futura-Bold'] text-sm  text-[#FFBF00] bg-transparent rounded-lg text-center hover:bg-[#FFBF00] border border-[#FFBF00] hover:text-black ">REGISTRO</a>  
+                                @else
+                                    <a href="{{ route('login') }}" class="m-4 px-6 py-3.5 font-['Futura-Bold'] text-sm  text-black   bg-[#FFBF00]   rounded-lg text-center hover:bg-orange-500">ENTRAR</a>
+                                    <a href="{{ route('register') }}" class="m-4 px-6 py-3.5 font-['Futura-Bold'] text-sm  text-[#FFBF00] bg-transparent rounded-lg text-center hover:bg-[#FFBF00] border border-[#FFBF00] hover:text-black ">REGISTRO</a>
+                                @endauth
+                            </div>
                         </ul>
+                    </div>
+                    <div class="hidden lg:flex flex-row gap-2 lg:order-3 items-center">
+                        @auth
+                            <a href="{{ route('dashboard') }}" class="m-4 px-6 py-3.5 font-['Futura-Bold'] text-sm  text-black   bg-[#FFBF00]   rounded-lg text-center hover:bg-orange-500">ENTRAR</a>
+                            <a href="{{ route('dashboard') }}" class="m-4 px-6 py-3.5 font-['Futura-Bold'] text-sm  text-[#FFBF00] bg-transparent rounded-lg text-center hover:bg-[#FFBF00] border border-[#FFBF00] hover:text-black ">REGISTRO</a>  
+                        @else
+                            <a href="{{ route('login') }}" class="m-4 px-6 py-3.5 font-['Futura-Bold'] text-sm  text-black   bg-[#FFBF00]   rounded-lg text-center hover:bg-orange-500">ENTRAR</a>
+                            <a href="{{ route('register') }}" class="m-4 px-6 py-3.5 font-['Futura-Bold'] text-sm  text-[#FFBF00] bg-transparent rounded-lg text-center hover:bg-[#FFBF00] border border-[#FFBF00] hover:text-black ">REGISTRO</a>
+                        @endauth
                     </div>
                 </div>
             </nav>
@@ -96,8 +114,8 @@
                             quibusdam reiciendis laborum totam commodi?
                         </p>
                         <div class="flex">
-                            <button onclick="nextPage('2')" class="m-4 px-6 py-3.5 font-['Futura-Bold'] text-black bg-[#FFBF00] rounded-lg text-center hover:bg-orange-500">SOBRE MIM</button>
-                            <button onclick="nextPage('5')" type="button" class="m-4 text-[#FFBF00] border border-[#FFBF00] font-['Futura-Bold'] rounded-lg text-sm px-5 text-center hover:text-black hover:bg-[#FFBF00]">CONTATO</button>
+                            <button type="button" onclick="nextPage('2')" class="m-4 px-6 py-3.5 font-['Futura-Bold'] text-black bg-[#FFBF00] rounded-lg text-center hover:bg-orange-500">SOBRE MIM</button>
+                            <button type="button" onclick="nextPage('5')" type="button" class="m-4 text-[#FFBF00] border border-[#FFBF00] font-['Futura-Bold'] rounded-lg text-sm px-5 text-center hover:text-black hover:bg-[#FFBF00]">CONTATO</button>
                         </div>
                     </div>
                     <div class="w-12/12 xl:w-5/12 grid content-end justify-center">
