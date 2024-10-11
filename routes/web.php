@@ -21,5 +21,10 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::get('/dashboard', function () {
         return view('user.dashboard');
     })->name('dashboard');
+
+    Route::get('/user/profile', function () {
+        return view('user.profile');
+    })->name('profile');
 });
+
 

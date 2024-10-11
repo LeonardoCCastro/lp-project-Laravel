@@ -94,7 +94,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="grid grid-cols-1 gap-4 mt-4 w-full md:grid-cols-2 xl:grid-cols-3">
                 <div class="p-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 dark:bg-gray-800">
                     <div class="flex items-center">
@@ -702,7 +701,7 @@
                                 <li class="py-3 sm:py-4">
                                     <div class="flex items-center space-x-4">
                                         <div class="flex-shrink-0">
-                                            <img class="w-8 h-8 rounded-full" src="../images/users/neil-sims.png"
+                                            <img class="w-8 h-8 rounded-full" src="https://flowbite.com/application-ui/demo/images/users/neil-sims.png"
                                                 alt="Neil image">
                                         </div>
                                         <div class="flex-1 min-w-0">
@@ -724,7 +723,7 @@
                                     <div class="flex items-center space-x-4">
                                         <div class="flex-shrink-0">
                                             <img class="w-8 h-8 rounded-full"
-                                                src="../images/users/bonnie-green.png" alt="Neil image">
+                                                src="https://flowbite.com/application-ui/demo/images/users/bonnie-green.png" alt="Neil image">
                                         </div>
                                         <div class="flex-1 min-w-0">
                                             <p
@@ -745,7 +744,7 @@
                                     <div class="flex items-center space-x-4">
                                         <div class="flex-shrink-0">
                                             <img class="w-8 h-8 rounded-full"
-                                                src="../images/users/michael-gough.png" alt="Neil image">
+                                                src="https://flowbite.com/application-ui/demo/images/users/michael-gough.png" alt="Neil image">
                                         </div>
                                         <div class="flex-1 min-w-0">
                                             <p
@@ -766,7 +765,7 @@
                                     <div class="flex items-center space-x-4">
                                         <div class="flex-shrink-0">
                                             <img class="w-8 h-8 rounded-full"
-                                                src="../images/users/thomas-lean.png" alt="Neil image">
+                                                src="https://flowbite.com/application-ui/demo/images/users/thomas-lean.png" alt="Neil image">
                                         </div>
                                         <div class="flex-1 min-w-0">
                                             <p
@@ -786,7 +785,7 @@
                                 <li class="py-3 sm:py-4">
                                     <div class="flex items-center space-x-4">
                                         <div class="flex-shrink-0">
-                                            <img class="w-8 h-8 rounded-full" src="../images/users/lana-byrd.png"
+                                            <img class="w-8 h-8 rounded-full" src="https://flowbite.com/application-ui/demo/images/users/lana-byrd.png"
                                                 alt="Neil image">
                                         </div>
                                         <div class="flex-1 min-w-0">

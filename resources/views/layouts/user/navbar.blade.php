@@ -25,10 +25,9 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                <a href="./" class="flex mr-14">
-                    <img src="../images/logo.svg" class="mr-3 h-8" alt="FlowBite Logo" />
-                    <span
-                        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                <a href="{{ route('dashboard') }}" class="flex flex-row gap-3 lg:mr-14">
+                    <x-application-mark class="block h-8 lg:h-9 w-auto" />
+                    <span class="hidden lg:block self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
                 </a>
                 <form action="#" method="GET" class="hidden lg:block lg:pl-2">
                     <label for="topbar-search" class="sr-only">Search</label>
@@ -81,7 +80,7 @@
                         <a href="#"
                             class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600">
                             <div class="flex-shrink-0">
-                                <img class="w-11 h-11 rounded-full" src="../images/users/bonnie-green.png"
+                                <img class="w-11 h-11 rounded-full" src="https://flowbite.com/application-ui/demo/images/users/bonnie-green.png"
                                     alt="Jese image">
                                 <div
                                     class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 rounded-full border border-white bg-primary-700 dark:border-gray-700">
@@ -107,7 +106,7 @@
                         <a href="#"
                             class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600">
                             <div class="flex-shrink-0">
-                                <img class="w-11 h-11 rounded-full" src="../images/users/jese-leos.png"
+                                <img class="w-11 h-11 rounded-full" src="https://flowbite.com/application-ui/demo/images/users/jese-leos.png"
                                     alt="Jese image">
                                 <div
                                     class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-gray-900 rounded-full border border-white dark:border-gray-700">
@@ -132,7 +131,7 @@
                         <a href="#"
                             class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600">
                             <div class="flex-shrink-0">
-                                <img class="w-11 h-11 rounded-full" src="../images/users/joseph-mcfall.png"
+                                <img class="w-11 h-11 rounded-full" src="https://flowbite.com/application-ui/demo/images/users/joseph-mcfall.png"
                                     alt="Joseph image">
                                 <div
                                     class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-red-600 rounded-full border border-white dark:border-gray-700">
@@ -157,7 +156,7 @@
                         <a href="#"
                             class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600">
                             <div class="flex-shrink-0">
-                                <img class="w-11 h-11 rounded-full" src="../images/users/leslie-livingston.png"
+                                <img class="w-11 h-11 rounded-full" src="https://flowbite.com/application-ui/demo/images/users/leslie-livingston.png"
                                     alt="Leslie image">
                                 <div
                                     class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white dark:border-gray-700">
@@ -181,7 +180,7 @@
                         </a>
                         <a href="#" class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-600">
                             <div class="flex-shrink-0">
-                                <img class="w-11 h-11 rounded-full" src="../images/users/robert-brown.png"
+                                <img class="w-11 h-11 rounded-full" src="https://flowbite.com/application-ui/demo/images/users/robert-brown.png"
                                     alt="Robert image">
                                 <div
                                     class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-purple-500 rounded-full border border-white dark:border-gray-700">
@@ -276,7 +275,7 @@
                             </svg>
                             <div class="text-sm font-medium text-gray-900 dark:text-white">Profile</div>
                         </a>
-                        <a href="#"
+                        <a href="{{ route('profile') }}"
                             class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600">
                             <svg class="mx-auto mb-1 w-7 h-7 text-gray-500 dark:text-gray-400" fill="currentColor"
                                 viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -320,16 +319,19 @@
                             </svg>
                             <div class="text-sm font-medium text-gray-900 dark:text-white">Billing</div>
                         </a>
-                        <a href="#"
-                            class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600">
-                            <svg class="mx-auto mb-1 w-7 h-7 text-gray-500 dark:text-gray-400" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
-                                </path>
-                            </svg>
-                            <div class="text-sm font-medium text-gray-900 dark:text-white">Logout</div>
-                        </a>
+                        <form method="POST" action="{{ route('logout') }}" class="flex justify-center">
+                            @csrf    
+                            <button type="submit"
+                                class="block w-full text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600">
+                                <svg class="mx-auto mb-1 w-7 h-7 text-gray-500 dark:text-gray-400" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
+                                    </path>
+                                </svg>
+                                <div class="text-sm font-medium text-gray-900 dark:text-white">Logout</div>
+                            </button>
+                        </form>
                     </div>
                 </div>
                 <button id="theme-toggle" data-tooltip-target="tooltip-toggle" type="button"
@@ -354,10 +356,20 @@
                 <div class="flex items-center ml-3">
                     <div>
                         <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                            class="flex text-sm bg-gray-800 rounded-full {{ Laravel\Jetstream\Jetstream::managesProfilePhotos() ? 'focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600' : '' }}"
                             id="user-menu-button-2" aria-expanded="false" data-dropdown-toggle="dropdown-2">
                             <span class="sr-only">Open user menu</span>
-                            <img class="w-8 h-8 rounded-full" src="../images/users/neil-sims.png" alt="user photo">
+                            @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                                <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                            @else
+                                <div class="inline-flex items-center py-2 text-sm leading-4 font-medium rounded-md bg-white focus:outline-none transition ease-in-out duration-150 dark:text-white dark:bg-gray-800">
+                                    {{ Auth::user()->name }}
+
+                                    <svg class="ms-2 -me-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                                    </svg>
+                                </div>
+                            @endif
                         </button>
                     </div>
 
@@ -373,12 +385,12 @@
                         </div>
                         <ul class="py-1" role="none">
                             <li>
-                                <a href="#"
+                                <a href="{{ route('dashboard') }}"
                                     class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                     role="menuitem">Dashboard</a>
                             </li>
                             <li>
-                                <a href="#"
+                                <a href="{{ route('profile') }}"
                                     class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                                     role="menuitem">Settings</a>
                             </li>
