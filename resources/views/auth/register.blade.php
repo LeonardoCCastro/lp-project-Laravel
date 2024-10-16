@@ -7,8 +7,6 @@
             </a>
         </x-slot>
 
-        <x-validation-errors class="mb-4" />
-
         <div class="p-6 space-y-4 md:space-y-6 lg:space-y-8 sm:p-8">
             <h1 class="text-xl font-bold leading-tight tracking-tight text-center text-gray-900 md:text-2xl dark:text-white">
                 Create a Free Account
