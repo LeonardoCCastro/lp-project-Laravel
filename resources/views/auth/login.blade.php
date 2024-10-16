@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <a href="{{ route('index') }}" class="flex items-center mb-6 text-2xl font-semibold text-white">
+            <a href="{{ route('dashboard') }}" class="flex items-center mb-6 text-2xl font-semibold text-white">
                 <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo">
                 Flowbite    
             </a>
