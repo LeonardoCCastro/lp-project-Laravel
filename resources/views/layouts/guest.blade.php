@@ -13,6 +13,9 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="{{ asset('js/jquery.js') }}"></script>
+        <script src="{{ asset('js/flowbite.js') }}"></script>
+        <script src="{{ asset('js/dark-mode.js') }}"></script>
 
         <!-- Styles -->
         @livewireStyles

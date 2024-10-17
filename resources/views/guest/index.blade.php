@@ -326,4 +326,5 @@
     <script src="{{ asset('js/fancybox.js') }}"></script>
     <script src="{{ asset('js/fullpage.js') }}"></script>
     <script src="{{ asset('js/vanilla-tilt.js') }}"></script>
+    <script src="{{ asset('js/landing-page.js') }}"></script>
 @endsection
