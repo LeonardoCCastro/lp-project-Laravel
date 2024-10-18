@@ -14,4 +14,7 @@
         </div>
         @include('layouts.user.scriptfooter')
     </body>
+
+    {{-- <div class="ml-64 lg:ml-64 w-64 lg:w-64"></div>
+    <div class="ml-16 lg:ml-16 w-16 lg:w-16"></div> --}}
 </html>

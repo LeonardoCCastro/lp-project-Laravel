@@ -73,5 +73,26 @@ export default {
         },
     },
 
-    plugins: [forms, typography, require('flowbite/plugin')],
+    plugins: [
+        forms,
+        typography, 
+        require('flowbite/plugin'),
+        function ({ addUtilities }) {
+            const newUtilities = {
+                ".fill-1": {
+                    fontVariationSettings: '"FILL" 1',
+                },
+                ".fill-0": {
+                    fontVariationSettings: '"FILL" 0',
+                },
+                ".scrollbar-thin": {
+                    scrollbarWidth: 'thin',
+                },
+                ".scrollbar-primary": {
+                    scrollbarColor: '#2563eb transparent',
+                }, 
+            };
+            addUtilities(newUtilities, ["responsive", "hover"]);
+        },
+    ],
 }; 

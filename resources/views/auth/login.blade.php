@@ -1,10 +1,7 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <a href="{{ route('dashboard') }}" class="flex items-center mb-6 text-2xl font-semibold text-white">
-                <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo">
-                Flowbite    
-            </a>
+            <x-custom-logo/>
         </x-slot>
 
         <div class="p-6 space-y-4 md:space-y-6 lg:space-y-8 sm:p-8">
@@ -54,7 +51,5 @@
                 </p>
             </form>
         </div>
-
-        
     </x-authentication-card>
 </x-guest-layout>
