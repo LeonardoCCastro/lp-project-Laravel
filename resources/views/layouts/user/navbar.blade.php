@@ -377,10 +377,10 @@
                         id="dropdown-2">
                         <div class="py-3 px-4" role="none">
                             <p class="text-sm text-gray-900 dark:text-white" role="none">
-                                Neil Sims
+                                {{ Auth::user()->name }}
                             </p>
                             <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                                neil.sims@flowbite.com
+                                {{ Auth::user()->email }}
                             </p>
                         </div>
                         <ul class="py-1" role="none">
@@ -402,7 +402,7 @@
                             <li>
                                 <form method="POST" action="{{ route('logout') }}" class="block cursor-pointer py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white">
                                     @csrf
-                                    <button type="submit" role="menuitem" class="flex w-full">Sign out</button>
+                                    <button type="submit" role="menuitem" class="flex w-full">Sair</button>
                                 </form>
                             </li>
                         </ul>

@@ -6,7 +6,7 @@
 
         <div class="p-6 space-y-4 md:space-y-6 lg:space-y-8 sm:p-8">
             <h1 class="text-xl font-bold leading-tight tracking-tight text-center text-gray-900 md:text-2xl dark:text-white">
-                Create a Free Account
+                Registre-se
             </h1>
         
             <x-validation-errors class="mb-4" />
@@ -21,22 +21,22 @@
                 @csrf
         
                 <div>
-                    <x-label for="name" value="{{ __('Name') }}" />
+                    <x-label for="name" value="{{ __('Nome') }}" />
                     <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
                 </div>
         
                 <div>
-                    <x-label for="email" value="{{ __('Email') }}" />
+                    <x-label for="email" value="{{ __('E-mail') }}" />
                     <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
                 </div>
         
                 <div>
-                    <x-label for="password" value="{{ __('Password') }}" />
+                    <x-label for="password" value="{{ __('Senha') }}" />
                     <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
                 </div>
         
                 <div>
-                    <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                    <x-label for="password_confirmation" value="{{ __('Confirmar Senha') }}" />
                     <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
                 </div>
         
@@ -46,9 +46,9 @@
                             <x-checkbox name="terms" id="terms" required />
 
                             <div class="ms-2">
-                                {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:text-white dark:hover:text-primary-600">'.__('Terms of Service').'</a>',
-                                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:text-white dark:hover:text-primary-600">'.__('Privacy Policy').'</a>',
+                                {!! __('Eu concordo com os :terms_of_service e as :privacy_policy', [
+                                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:text-white dark:hover:text-primary-600">'.__('Termos de Serviço').'</a>',
+                                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:text-white dark:hover:text-primary-600">'.__('Políticas de Privacidade').'</a>',
                                 ]) !!}
                             </div>
                         </div>
@@ -56,11 +56,11 @@
                 @endif
         
                 <x-button class="w-full">
-                    {{ __('Register') }}
+                    {{ __('Registrar-se') }}
                 </x-button>
 
                 <div class="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Already have an account? <a href="{{ route('login') }}" class="text-primary-700 hover:underline dark:text-primary-500">Login here</a>
+                    Já tem uma conta ? <a href="{{ route('login') }}" class="text-primary-700 hover:underline dark:text-primary-500">Faça login aqui</a>
                 </div>
         
             </form>

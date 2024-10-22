@@ -6,7 +6,7 @@
 
         <div class="p-6 space-y-4 md:space-y-6 lg:space-y-8 sm:p-8">
             <h1 class="text-xl font-bold leading-tight tracking-tight text-center text-gray-900 md:text-2xl dark:text-white">
-                Reset your password
+                Redefinir sua senha
             </h1>
         
             <x-validation-errors class="mb-4" />
@@ -17,22 +17,22 @@
                 <input type="hidden" name="token" value="{{ $request->route('token') }}">
         
                 <div>
-                    <x-label for="email" value="{{ __('Email') }}" />
+                    <x-label for="email" value="{{ __('E-mail') }}" />
                     <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
                 </div>
         
                 <div>
-                    <x-label for="password" value="{{ __('Password') }}" />
+                    <x-label for="password" value="{{ __('Senha') }}" />
                     <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
                 </div>
         
                 <div>
-                    <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
+                    <x-label for="password_confirmation" value="{{ __('Confirmar Senha') }}" />
                     <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
                 </div>
         
                 <x-button class="w-full">
-                    {{ __('Reset Password') }}
+                    {{ __('Redefinir Senha') }}
                 </x-button>
             </form>
         </div>

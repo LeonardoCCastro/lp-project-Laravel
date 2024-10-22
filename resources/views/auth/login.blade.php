@@ -6,7 +6,7 @@
 
         <div class="p-6 space-y-4 md:space-y-6 lg:space-y-8 sm:p-8">
             <h1 class="text-xl font-bold leading-tight tracking-tight text-center text-gray-900 md:text-2xl dark:text-white">
-                Sign in to your account
+                Login
             </h1>
 
             <x-validation-errors class="mb-4" />
@@ -21,12 +21,12 @@
                 @csrf
     
                 <div>
-                    <x-label for="email" value="{{ __('Email') }}" />
+                    <x-label for="email" value="{{ __('E-mail') }}" />
                     <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
                 </div>
     
                 <div>
-                    <x-label for="password" value="{{ __('Password') }}" />
+                    <x-label for="password" value="{{ __('Senha') }}" />
                     <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
                 </div>
     
@@ -36,18 +36,18 @@
                             <x-checkbox id="remember_me" name="remember" />
                         </div>
                         <div class="ml-3 text-sm">
-                            <label for="remember_me" class="text-gray-500 dark:text-gray-300">{{ __('Remember me') }}</label>
+                            <label for="remember_me" class="text-gray-500 dark:text-gray-300">{{ __('Manter-me conectado') }}</label>
                         </div>
                     </div>
                     @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">{{ __('Forgot your password?') }}</a>
+                        <a href="{{ route('password.request') }}" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">{{ __('Esqueceu sua senha ?') }}</a>
                     @endif
                 </div>
                 <x-button type="submit" class="w-full">
-                    {{ __('Log in') }}
+                    {{ __('Entrar') }}
                 </x-button>
                 <p class="text-sm font-light text-center text-gray-500 dark:text-gray-300">
-                    <a href="{{ route('register') }}" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Don't have an account?</a>
+                    <a href="{{ route('register') }}" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Não tem uma conta ?</a>
                 </p>
             </form>
         </div>

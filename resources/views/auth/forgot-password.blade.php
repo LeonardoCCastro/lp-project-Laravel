@@ -6,10 +6,10 @@
 
         <div class="p-6 space-y-4 md:space-y-6 lg:space-y-8 sm:p-8">
             <h2 class="mb-3 text-2xl font-bold text-gray-900 lg:text-3xl dark:text-white">
-                Forgot your password?
+                Esqueceu sua senha?
             </h2>
             <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                Don't fret! Just type in your email and we will send you a code to reset your password!
+                Não se preocupe! Basta digitar seu e-mail e enviaremos um código para redefinir sua senha!
             </p>
         
             @session('status')
@@ -22,12 +22,12 @@
                 @csrf
         
                 <div>
-                    <x-label for="email" value="{{ __('Email') }}" />
+                    <x-label for="email" value="{{ __('E-mail') }}" />
                     <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
                 </div>
         
                 <x-button class="w-full">
-                    {{ __('Reset Password') }}
+                    {{ __('Redefinir Senha') }}
                 </x-button>
             </form>
         </div>
