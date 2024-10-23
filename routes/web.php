@@ -1,6 +1,10 @@
 <?php
 
+use Laravel\Fortify\Features;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,18 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-Route::get('/', function () {
-    return view('guest.index');
-})->name('index');
+Route::get('/', [LandingPageController::class, 'show'])->name('index');
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('user.dashboard');
-    })->name('dashboard');
-
-    Route::get('/user/profile', function () {
-        return view('user.profile');
-    })->name('profile');
+    Route::get('/dashboard', [DashboardController::class, 'show'])->name('dashboard');
+    if (Features::enabled(Features::updateProfileInformation())) {
+        Route::get('/user/profile', [ProfileController::class, 'show'])->name('profile');
+    }
 });
-
-
