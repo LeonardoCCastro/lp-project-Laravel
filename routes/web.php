@@ -2,9 +2,11 @@
 
 use Laravel\Fortify\Features;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LandingPageController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Middleware\EnsureUserIsAdmin;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +23,11 @@ Route::get('/', [LandingPageController::class, 'show'])->name('index');
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'show'])->name('dashboard');
+
     if (Features::enabled(Features::updateProfileInformation())) {
         Route::get('/user/profile', [ProfileController::class, 'show'])->name('profile');
     }
+
+    Route::get('/admin/manage-users', [UserController::class, 'create'])->name('manage-users.create')->middleware('role:admin');
+    Route::post('/admin/manage-users', [UserController::class, 'store'])->name('manage-users.store')->middleware('role:admin');
 });
