@@ -28,6 +28,5 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
         Route::get('/user/profile', [ProfileController::class, 'show'])->name('profile');
     }
 
-    Route::get('/admin/manage-users', [UserController::class, 'create'])->name('manage-users.create')->middleware('role:admin');
-    Route::post('/admin/manage-users', [UserController::class, 'store'])->name('manage-users.store')->middleware('role:admin');
+    Route::get('/admin/manage-users', [UserController::class, 'show'])->name('manage-users.create')->middleware('role:admin');
 });
