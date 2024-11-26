@@ -1,4 +1,4 @@
-<div class="max-w-7xl mx-auto p-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 dark:bg-gray-800">
+<div class="p-4 bg-white rounded-lg shadow sm:p-6 xl:p-8 dark:bg-gray-800">
     <h1 class="text-xl font-bold leading-tight tracking-tight text-center text-gray-900 md:text-2xl dark:text-white">
         Criar Novo Usuário
     </h1>

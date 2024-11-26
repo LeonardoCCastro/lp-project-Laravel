@@ -37,6 +37,6 @@ class UserManageComponent extends Component
         $user->assignRole($this->role ?: 'user');
 
         session()->flash('success', 'Usuário criado com sucesso!');
-        $this->reset(); // Limpa os campos do formulário
+        $this->reset();
     }
 }
